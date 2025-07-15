@@ -62,8 +62,8 @@ Develop a simple web application that demonstrates basic integration between fro
 ### Key Components
 
 
-- Authentication & Authorization
-- CRUD Operations for Invetory System
+- Simple Login & Logout
+- Database
 
 ### Technology
 
