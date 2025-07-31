@@ -8,4 +8,4 @@ define('PAGES_PATH', realpath(BASE_PATH . "/pages"));
 define('STATICDATAS_PATH', realpath(BASE_PATH . "/staticData"));
 define('DUMMIES_PATH', realpath(BASE_PATH . "/staticData/dummies"));
 define('UTILS_PATH', realpath(BASE_PATH . "/utils"));
-define('ERRORS_PATH', realpath(BASE_PATH . "/servers"));
+define('ERRORS_PATH', realpath(BASE_PATH . "/errors"));

@@ -10,27 +10,16 @@ if (isset($_GET['logout'])) {
     exit;
 }
 $username = $_SESSION['first_name'];
+$pageTitle = "Homepage - AD TASK 3";
+
+include LAYOUTS_PATH . '/header.layout.php';
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage - AD TASK 3</title>
-</head>
-</head>
-<body>
-    <header>
-        <h2>AD TASK 3</h2>
-    </header>
     <main>
-        <h1>Welcome user <?= htmlspecialchars($username) ?></h1>
-        <form method="get">
-            <button type="submit" name="logout" value="1">Logout</button>
-        </form>
+        <div class="welcome-container">
+            <h1>Welcome user <?= htmlspecialchars($username) ?></h1>
+            <form method="get">
+                <button type="submit" name="logout" value="1" class="logout-btn">Logout</button>
+            </form>
+        </div>
     </main>
-    <footer>
-        <p>Created by Christiane Banaag</p>
-    </footer>
-</body>
-</html>
+<?php include LAYOUTS_PATH . '/footer.layout.php';
