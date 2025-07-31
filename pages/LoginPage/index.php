@@ -1,5 +1,4 @@
 <?php
-// Login page using components and layouts
 require_once COMPONENTS_PATH . '/login.component.php';
 
 $pageTitle = "Login - AD TASK 3";

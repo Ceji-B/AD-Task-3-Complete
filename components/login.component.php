@@ -1,9 +1,10 @@
 <?php
-// Login component - handles login logic and form rendering
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
-ob_start(); // Start output buffering to prevent header issues
+ob_start();
+
+require_once COMPONENTS_PATH . '/errorHandler.component.php';
 
 function handleLogin() {
     $error = '';
@@ -12,24 +13,20 @@ function handleLogin() {
         $username = $_POST['username'] ?? '';
         $password = $_POST['password'] ?? '';
         
-        // Basic validation
         if (empty($username) || empty($password)) {
             return 'Username and password are required.';
         }
         
-        // Load user data
         try {
             $users = require DUMMIES_PATH . '/users.staticData.php';
         } catch (Exception $e) {
-            return 'Error loading user data: ' . $e->getMessage();
+            handle500('Error loading user data: ' . $e->getMessage());
         }
         
-        // Check if users data is loaded
         if (empty($users)) {
-            return 'User data could not be loaded.';
+            handle500('User data could not be loaded.');
         }
         
-        // Validate credentials
         foreach ($users as $user) {
             if ($user['username'] === $username && $user['password'] === $password) {
                 $_SESSION['username'] = $user['username'];
@@ -37,7 +34,6 @@ function handleLogin() {
                 $_SESSION['last_name'] = $user['last_name'];
                 $_SESSION['role'] = $user['role'];
                 
-                // Clean any output buffer and redirect
                 ob_end_clean();
                 header('Location: ../Homepage/index.php');
                 exit();

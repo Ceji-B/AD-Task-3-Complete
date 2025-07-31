@@ -1,6 +1,5 @@
 
 <?php
-// Basic homepage with header, welcome message, login button, and footer
 $pageTitle = "AD TASK 3 - Homepage";
 include LAYOUTS_PATH . '/header.layout.php';
 ?>

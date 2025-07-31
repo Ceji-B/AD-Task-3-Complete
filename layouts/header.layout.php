@@ -1,5 +1,4 @@
 <?php
-// Header layout component
 ?>
 <!DOCTYPE html>
 <html lang="en">
