@@ -62,8 +62,8 @@ Develop a simple web application that demonstrates basic integration between fro
 ### Key Components
 
 
-- Authentication & Authorization
-- CRUD Operations for Invetory System
+- Simple Login & Logout
+- Database
 
 ### Technology
 
@@ -146,4 +146,6 @@ AD-ProjectName
 | Title        | Purpose                                                                       | Link          |
 | ------------ | ----------------------------------------------------------------------------- | ------------- |
 | zyx-0314 | Used as Guidelines for this activity | https://github.com/zyx-0314/hands-on |
+| Chatgpt | Used for some parts and for comprehensive understanding of instructions| https://chatgpt.com/ |
+| Github Copilot | Used for some parts and for understanding some instructions  | https://github.com/copilot |
 
